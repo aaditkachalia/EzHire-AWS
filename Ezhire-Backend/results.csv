@@ -1,0 +1,32 @@
+questionid,topic,difficulty,question,userAnswer,score
+1001,OOP,E,What is an Object? ,Object is an instance of a class,3.0
+1007,OOP,E,How many arguments can a ternary operator take?,Ternary operator can take upto three arguments,5.0
+1012,OOP,M,What is a class?,Class is a code used to creating objects,4.0
+9006,OOP,M,What does a class define?,A class defines member variables and object,2.0
+1013,OOP,M,What is Single Inheritance?,"When a class is derived from a parent class and retains the property of that parent class, it is knows as single inheritance",5.0
+1004,OOP,H,What is a friend function? ,friend functions are set of methods having different access and privilege modes,0.0
+1011,OOP,H,Which OOPS concept exposes only the necessary information to the calling functions?,I don't know,0.0
+1009,OOP,H,What is the default access modifier in a class?,I think by default all the classes have public access by default,5.0
+1401,ML,E,Which learning technique uses labeled data?,Supervised learning is used for labeled data,5.0
+1407,ML,M,What is linear regression?,Linear regression is a method of finding a linear relationship between input and and output variables  ,5.0
+1408,ML,M,What is classification?,Classification is used to distinguish the items between a labelled data. It is a method to categories your data,5.0
+1409,ML,H,What is association in machine learning?,Association in machine learning helps in finding relationship between items and their likeliness towards an outcome,4.0
+9019,ML,H,Association in machine learning aims to find relationship between _______ and ______.,They help to find the relationship between INPUT and OUTPUT variables,4.0
+1410,ML,H,What is transfer learning? ,I don't know,0.0
+1406,ML,H,Explain in short backpropagation algorithm?,Backpropagation algorithm is the process of minimizing the bias in a neural network by adjusting the weights of the hidden layers,4.0
+9017,ML,H,Backpropogation algorithm caters to which particular type of supervised learning network?,I think they are mainly used for feedforward network,0.0
+1202,NW,E,What are the layers of OSI model?,"The OSI Layers of OSI are Physical, Data, Network, Transport, Session, Presentation and Application layer",5.0
+1204,NW,M,What Is Encapsulation Technique?,Encapsulation technique is nothing but a process to carry out a task in an abstract manner,0.0
+1201,NW,M,What is a socket?,Socket can be defined as an endpoint for sending and receiving signals,0.0
+1206,NW,M,What is .recv() function used for?,This function is probably used for receiving messages from the server ,4.0
+9010,NW,M,What should be the protocol parameter for this function?,Such functions are usually working TCP and UDP protocols. TCP is more common protocol for the message transfer,0.0
+1301,DJ,E,Which architectural pattern does Django follow?,The Django follows the MVC architecture,5.0
+1303,DJ,M,What are the three main components of Django?,"Three main components are Models,Views and Component",0.0
+1304,DJ,M,Give three advantages of Django.,Django as a framework is very lightweight. compatible with almost all operating systems and is very secure,5.0
+1309,DJ,M,What are some Django Exception Classes?,Those classes are used to handle the exceptions that can be raised while deploying your applications,0.0
+1310,DJ,M,What is a Django Session?,Django sessions maintains the user credentials for as far as he is logged in,0.0
+1101,EH,E,What is the minimum number of except statements a try-catch block should have?,There can be only one Except statement,4.0
+1104,EH,E,When is the finally block executed?,At the end of the try except code. Finally is used after the exception is handled by catch statement,0.0
+1105,EH,E,What happens when ‘1’ == 1 is executed?,It throws an error as both are of different data type,5.0
+1103,EH,M,Can one block of except statements handle multiple exception?,Yes it can handle multiple catch statements,0.0
+1107,EH,M,What Is an Error in Python?,I dont know,0.0
