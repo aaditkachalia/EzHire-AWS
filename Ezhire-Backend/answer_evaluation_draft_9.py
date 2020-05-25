@@ -26,7 +26,7 @@ starTopic = []
 embedder = SentenceTransformer('bert-base-nli-mean-tokens')
 corpus_embeddings = embedder.encode(corpus)
 
-resultDf = pd.DataFrame(columns=['questionid', 'topic', 'difficulty', 'question', 'userAnswer', 'score'])
+resultDf = pd.DataFrame(columns=['questionid', 'topic', 'difficulty', 'question', 'userAnswer', 'idealAnswers', 'score'])
 
 	
 counter = 0
@@ -74,7 +74,7 @@ def evaluateAnswer(answer):
 	
 
 	closest_n = 5
-
+	idealAnsStr = ""
 	topFive = []
 	topFiveScores = []
 	queries = [answer]
@@ -92,6 +92,7 @@ def evaluateAnswer(answer):
 		nextQuestion = questionsdf.loc[questionsdf['id'] == nextQuestionId, 'question'].iloc[0]
 
 		idealAnswerScore = []
+		idealAnsStr = "; ".join([str(n) for n in idealAnswerDf.answer.tolist()])
 		for idealAnswer in idealAnswerDf.answer.tolist():
 
 			ideal_text_tokens = word_tokenize(idealAnswer)
@@ -149,7 +150,7 @@ def evaluateAnswer(answer):
 
 			rating = max(idealAnswerScore)
 
-		resultDf = resultDf.append({'questionid': nextQuestionId, 'topic': topic, 'difficulty': nextQuestionDifficulty, 'question': nextQuestion, 'userAnswer': answer, 'score': rating}, ignore_index = True)
+		resultDf = resultDf.append({'questionid': nextQuestionId, 'topic': topic, 'difficulty': nextQuestionDifficulty, 'question': nextQuestion, 'userAnswer': answer, 'idealAnswers': idealAnsStr, 'score': rating}, ignore_index = True)
 
 	return rating
 
