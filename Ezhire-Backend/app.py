@@ -340,8 +340,10 @@ def interviewnames():
 		candidates=json.dumps(candidates)
 		candidates=json.loads(candidates)
 		candlist=[]
-		for k,val in candidates.items():
-			candlist.append(val)
+		if candidates is not None:
+			for k,val in candidates.items():
+				candlist.append(val)
+		
 		print(candlist)
 
 		#print("JSON_Data is ", json_data, type(json_data))
