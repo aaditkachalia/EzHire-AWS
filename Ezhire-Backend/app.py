@@ -41,7 +41,7 @@ def send_notification(receiver, noti):
 	mail_content = "Hello, Testing your account"
 	#The mail addresses and password
 	sender_address = 'ezhirefyp@gmail.com'
-	sender_pass = 'ezpzlmnsqzy'
+	sender_pass = 'ihdygdgbrjgycqvz'
 	#receiver_address = 'receiver'
 	#Setup the MIME
 	message = MIMEMultipart()
