@@ -1,7 +1,7 @@
 const Config = {
 
 	//Hosted Server Ip Address
-	serverurl : "http://13.232.36.28:5000",
+	serverurl : "http://35.154.251.193:5000",
 
 
 }
