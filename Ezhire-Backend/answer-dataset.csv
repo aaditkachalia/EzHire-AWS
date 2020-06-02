@@ -26,6 +26,7 @@
 5201,1201,A socket is one end-point of a two-way communication link between two programs running on the network.
 5202,1201,A network socket is an internal endpoint for sending or receiving data within a node on a computer network.
 5203,1202,"Physical, Data Link, Networking, Transport, Session, Presentation, Application"
+5211,1202,"Physical, Transport, Data link, presentation, network, application, session"
 5204,1203,The combination of an IP address and a port number is called a socket.
 5205,1204,"It is used to protect your class against accidental changes to fields, which might leave the class in an inconsistent state."
 5206,1205,Multiprogramming is a rapid switching of the CPU back and forth between processes.
@@ -33,6 +34,7 @@
 5208,1207,It occurs when two or more processes are reading and writing some shared data and the final result depend on each other.
 5209,1208,A raw socket is a type of socket that allows access to the underlying transport provider.
 5210,1209,UDP is connection less and TCP is connection oriented. 
+5212,1209,UDP is connection-less while TCP is connection oriented transport mechnism
 5301,1301,Django follows Model-View-Template (MVT) architectural pattern.
 5302,1301,Model View Controller
 5303,1301,Django follows MVC

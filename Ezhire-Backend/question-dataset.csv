@@ -21,14 +21,14 @@
 1107,M,EH,What Is an Error in Python?,5107,subjective,,9999
 1108,M,EH,How to catch exceptions in Python?,5108,subjective,,9999
 1201,M,NW,What is a socket?,"5201, 5202",subjective,data,9008
-1202,E,NW,What are the layers of OSI model?,5203,subjective,,9999
+1202,E,NW,What are the layers of OSI model?,"5203, 5211",subjective,,9999
 1203,H,NW,What does a socket consist of?,5204,subjective,,9999
 1204,M,NW,What Is Encapsulation Technique?,5205,subjective,class,9009
 1205,H,NW,What is multiprogramming?,5206,subjective,,9999
 1206,M,NW,What is .recv() function used for?,5207,subjective,TCP,9010
 1207,E,NW,How does a race condition occur?,5208,subjective,,9999
 1208,H,NW,What are RAW sockets?,5209,subjective,transport provider,9011
-1209,E,NW,What is the difference between UDP and TCP?,5210,subjective,,9999
+1209,E,NW,What is the difference between UDP and TCP?,"5210, 5212",subjective,,9999
 1301,E,DJ,Which architectural pattern does Django follow?,"5301, 5302, 5303",subjective,,9999
 1302,E,DJ,Is Django a high-level web framework or low-level framework?,"5304, 5305, 5306",subjective,,9999
 1303,M,DJ,What are the three main components of Django?,"5307, 5308",subjective,,9999
