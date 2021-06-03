@@ -112,7 +112,6 @@ def evaluateAnswer(answer):
 
 			for (idx, distance) in results[0:closest_n]:
 
-    #             print(corpus[idx].strip(), "(Score: %.4f)" % (1-distance))
 
 				topFive.append(corpus[idx].strip())
 				topFiveScores.append(1 - distance)
@@ -174,9 +173,6 @@ def generateQuestion(topic, difficulty, followup = False):
 	global currentMediumQuestionsList
 	global currentHardQuestionsList
 
-	# topicDf = questionsdf[questionsdf['topic'] == currentTopic]
-	# questionsDifficultyDf = topicDf[topicDf['difficulty'] == difficulty]
-	# currentQuestionsList = questionsDifficultyDf.id.tolist()
 	
 	if followup == True:
 		nextQuestionId = questionsdf.loc[questionsdf['id'] == nextQuestionId, 'followup'].iloc[0]
@@ -203,10 +199,6 @@ def generateQuestion(topic, difficulty, followup = False):
 		currentHardQuestionsList.remove(nextQuestionId)
 
 
-	# nextQuestionId = random.choice(currentQuestionsList)
-	# nextQuestion = questionsDifficultyDf.loc[questionsDifficultyDf['id'] == nextQuestionId, 'question'].iloc[0]
-
-	# currentQuestionsList.remove()
 
 	return nextQuestion
 
@@ -257,7 +249,6 @@ def topicWiseScoring(results):
         
 	return topicScores
 
-# def createQuestionsLists():
 
 ## MAIN:
 
@@ -320,8 +311,6 @@ def main(answer):
 			topicScore = topicScore + currentAnswerScore
 
 			if topicScore < 5 and counter < 2 and len(currentEasyQuestionsList) != 0:
-				# difficulty = questionsdf.loc[questionsdf['id'] == nextQuestionId, 'difficulty'].iloc[0]
-				# topic = questionsdf.loc[questionsdf['id'] == questionId, 'topic'].iloc[0]
 				counter += 1
 				
 				nextQuestion = generateQuestion(currentTopic, "E")
@@ -386,9 +375,6 @@ def main(answer):
 					scores_csv = score_chartDf.to_csv(r"scores.csv",index = None, header=True)
 					export_csv = resultDf.to_csv(r"results.csv",index = None, header=True)
 					
-					
-				# topicsList.remove(currentTopic)
-
 
 	return nextQuestion
 

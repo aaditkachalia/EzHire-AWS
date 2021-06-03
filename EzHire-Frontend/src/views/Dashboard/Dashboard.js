@@ -60,7 +60,6 @@ export default function Dashboard() {
     window.open("https://www.google.com/")
   }
 const [isloaded, setLoad] = React.useState(false)
-//const [isschedule, setSchedule] = React.useState('false')
 const user=localStorage.getItem('user_id')
 var data ={"user":user}
 fetch(Config.serverurl+"/dashboardinterview",{
@@ -69,10 +68,7 @@ fetch(Config.serverurl+"/dashboardinterview",{
       })
       .then(res => res.json())
       .then(res =>{
-    //localStorage.setItem("interdata",JSON.stringify(res))
         localStorage.setItem("intercand",JSON.stringify(res))
-        //res=JSON.stringify(res)
-        //console.log("details " + typeof(res)+res)
 
     setLoad(true)
     data=""

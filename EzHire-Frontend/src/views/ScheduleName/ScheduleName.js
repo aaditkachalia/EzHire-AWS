@@ -116,8 +116,6 @@ export default function ScheduleName(){
 		function ScheduleInterview(){
 			let pos
 			let finalnames=[]
-			console.log(interuserid)
-			console.log(interviewusers)
 			Object.entries(interuserid).map(([key, value]) => {
 				pos=interviewusers.indexOf(value.key)
 				if(pos!==-1){
@@ -127,7 +125,6 @@ export default function ScheduleName(){
 			}
 			)
 		var data ={"interviewname": finalnames, "interviewid" : interviewid, "companyid":companyid, "isTaken":'false'}
-		console.log(data)
 		setSchedule(true)
 		fetch(Config.serverurl+"/schedulenames",{
         method:'POST',
@@ -145,18 +142,12 @@ export default function ScheduleName(){
 		if(isloaded==='true'){
 		let fbnames = localStorage.getItem('internames')
 		fbnames=JSON.parse(fbnames)
-		console.log(fbnames)
 		let interviewidp
 		let companyidp
 		let interviewpresent
  		let result=Object.entries(fbnames).map(([key, value]) => {
  				if(value.type==0){
- 				//interviewidp = location.state.cid
-				//companyidp = location.state.cname
  				interviewpresent = value.interviews
- 				console.log("Interviews inside "+ interviewpresent)
- 				//interviewpresent = interviewpresent.companyidp
- 				//interviewpresent = interviewpresent.interviewidp
  				if(true){
  				namejson={name : value.firstName, surname: value.lastName, username:value.username }
  				userjson = {key: value.username, value : key}
@@ -166,7 +157,6 @@ export default function ScheduleName(){
         	}
         		namejson={}
     })
- 		console.log(interfbnames)
 		return(
 			<div>
 			<OpenModal />

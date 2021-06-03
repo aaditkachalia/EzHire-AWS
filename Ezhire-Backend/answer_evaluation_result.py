@@ -86,20 +86,10 @@ def evaluateAnswer(answer):
 		idealAnswerScore = []
 		for idealAnswer in idealAnswerDf.answer.tolist():
 
-#             print("\n First ideal answer:", idealAnswer)
 
-#             idealAnswer = answerDf.loc[answerDf['qid'] == questionId, 'answer'].iloc[0]
-
-    #         print("\n \n \n Ideal Answer: ", idealAnswer, "\n \n \n")
-
-    #         Print all the results:
-    #         print("\n\n======================\n\n")
-    #         print("Query:", query)
-    #         print("\nTop 5 most similar sentences in corpus:")
 
 			for (idx, distance) in results[0:closest_n]:
 
-    #             print(corpus[idx].strip(), "(Score: %.4f)" % (1-distance))
 
 				topFive.append(corpus[idx].strip())
 				topFiveScores.append(1 - distance)
@@ -160,9 +150,6 @@ def generateQuestion(topic, difficulty):
 	global currentMediumQuestionsList
 	global currentHardQuestionsList
 
-	# topicDf = questionsdf[questionsdf['topic'] == currentTopic]
-	# questionsDifficultyDf = topicDf[topicDf['difficulty'] == difficulty]
-	# currentQuestionsList = questionsDifficultyDf.id.tolist()
 	
 	
 	if difficulty == "E":
@@ -184,15 +171,9 @@ def generateQuestion(topic, difficulty):
 		currentHardQuestionsList.remove(nextQuestionId)
 
 
-	# nextQuestionId = random.choice(currentQuestionsList)
-	# nextQuestion = questionsDifficultyDf.loc[questionsDifficultyDf['id'] == nextQuestionId, 'question'].iloc[0]
-
-	# currentQuestionsList.remove()
-
 	return nextQuestion
 
 
-# def createQuestionsLists():
 
 
 ## MAIN:
@@ -243,8 +224,6 @@ def main(answer):
 		topicScore = topicScore + currentAnswerScore
 
 		if topicScore < 5 and counter < 2:
-			# difficulty = questionsdf.loc[questionsdf['id'] == nextQuestionId, 'difficulty'].iloc[0]
-			# topic = questionsdf.loc[questionsdf['id'] == questionId, 'topic'].iloc[0]
 			counter += 1
 			nextQuestion = generateQuestion(currentTopic, "E")
 
@@ -286,7 +265,6 @@ def main(answer):
 				export_csv = resultDf.to_csv("results.csv",index = None, header=True)
 				
 				
-			# topicsList.remove(currentTopic)
 
 
 	return nextQuestion
@@ -296,12 +274,10 @@ def main(answer):
 if __name__== "__main__":
 
 	ques = main("")
-	print(ques)
 
 	while True:
 		ans = input("your answer: ")
 		ques = main(ans)
-		print(ques)
 	
 
 

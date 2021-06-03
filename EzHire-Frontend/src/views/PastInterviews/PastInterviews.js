@@ -52,9 +52,7 @@ if(isloaded=='true'){
   if(pastinterview!="null"){
   pastinterview=JSON.parse(pastinterview)
   let result=Object.entries(pastinterview).map(([key, value]) => {
-        //console.log(value)
         Object.entries(value['results']).map(([key1, value1]) => {
-          console.log(key1 + " yoo "+user)
           if(key1==user){
             statusint=value1.Status
           }
@@ -78,8 +76,6 @@ if(isloaded=='true'){
           }}
           data={interfbnames}
           title={"Interviews Taken"}
-          //onSelectionChange={(rows) => handleselection(rows)}
-          //onRowClick={(event,rowData) => viewResume()}
         />
   );
 }
