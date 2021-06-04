@@ -1,6 +1,6 @@
 # Interview System using CQAF
 
-<img src="./EzHire-Frontend/public/cqafint.jpg?raw=true width="500" height="250"/>
+![Header Image](./EzHire-Frontend/public/cqafint.jpg?raw=true)
 
 This repository is the official implementation of Interview system using "Continuous Question Answering Framework".
 
