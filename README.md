@@ -1,7 +1,6 @@
 # Interview System using CQAF
 
-![Header Image](./EzHire-Frontend/public/cqafint.jpg?raw=true)
-
+<img src="https://github.com/aaditkachalia/Ezhire-AWS/blob/master/EzHire-Frontend/public/cqafint.JPG" width="500" height="350"/>
 This repository is the official implementation of Interview system using "Continuous Question Answering Framework".
 
 This project is developed & deployed on React (Frontend) and Flask (Backend) along with using Firebase as our database server. 
