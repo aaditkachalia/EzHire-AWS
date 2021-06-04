@@ -34,14 +34,16 @@ You might not be able to access several features since the firebase credentials 
 
 ## Results
 
-Our model achieves the following performance on :
-
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
+Several candidates were asked to take an interview using this system. Further based on the response and model answer, experts were asked to rate the correctness of the response. The below table lists down the error betweem the human score and score given by the system across 5 different interview. In total 52 such interviews were conducted and on an average 21% of the questions were incorrectly scored with a MAE of 0.504 where the maximum score a candidate can achieve was 5.
 
 | Interview ID | Incorrectly Scored |  MAE  |  RMSE  |
 | -------------|--------------------|-------|--------|
 |0             |0.275               |0.655  |1.299   |
-
-## Contributing
-
->📋  Pick a licence and describe how to contribute to your code repository. 
+| -------------|--------------------|-------|--------|
+|1             |0.148               |0.333  |0.922   |
+| -------------|--------------------|-------|--------|
+|2             |0.133               |0.4    |1.09    |
+| -------------|--------------------|-------|--------|
+|3             |0.259               |0.666  |1.36    |
+| -------------|--------------------|-------|--------|
+|4             |0.19                |0.428  |1.046   |
