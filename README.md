@@ -1,6 +1,7 @@
-# Continuous Question Answering Framework
+# Interview System using CQAF
 
-This repository is the official implementation of "Continuous Question Answering Framework".
+<img src="https://github.com/aaditkachalia/Ezhire-AWS/blob/master/EzHire-Frontend/public/cqafint.JPG" width="800" height="400"/>
+This repository is the official implementation of Interview system using "Continuous Question Answering Framework".
 
 This project is developed & deployed on React (Frontend) and Flask (Backend) along with using Firebase as our database server. 
 A small video demo of the chatbot implementation is given [here](https://drive.google.com/file/d/1LsjA-ms-dmtf-1z8v82haUX1A8_rYT-h/view?usp=sharing)
@@ -11,6 +12,7 @@ The requirements file includes all the machine learning, nlp and development dep
 To install requirements:
 
 ```setup
+cd Ezhire-Backend/
 pip install -r requirements.txt
 ```
 
@@ -21,46 +23,23 @@ python app.py
 ```
 
 ## Frontend - React
-
-To train the model(s) in the paper, run this command:
-
-```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
+```
+cd EzHire-Frontend/
+npm install --silent
+npm run
 ```
 
->📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
+You might not be able to access several features since the firebase credentials are not present in the code.
 
-## Evaluation
-
-To evaluate my model on ImageNet, run:
-
-```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
-```
-
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
-
-## Pre-trained Models
-
-You can download pretrained models here:
-
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
-
->📋  Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
 
 ## Results
 
-Our model achieves the following performance on :
+Several candidates were asked to take an interview using this system. Further based on the response and model answer, experts were asked to rate the correctness of the response. The below table lists down the error betweem the human score and score given by the system across 5 different interview. In total 52 such interviews were conducted and on an average 21% of the questions were incorrectly scored with a MAE of 0.504 where the maximum score a candidate can achieve was 5.
 
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
-
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
-
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
-
-
-## Contributing
-
->📋  Pick a licence and describe how to contribute to your code repository. 
+| Interview ID | Incorrectly Scored |  MAE  |  RMSE  |
+| -------------|--------------------|-------|--------|
+|0             |0.275               |0.655  |1.299   |
+|1             |0.148               |0.333  |0.922   |
+|2             |0.133               |0.4    |1.09    |
+|3             |0.259               |0.666  |1.36    |
+|4             |0.19                |0.428  |1.046   |
