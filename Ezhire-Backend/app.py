@@ -11,13 +11,24 @@ from answer_evaluation_draft_9 import main
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from dotenv import load_dotenv
+
 
 
 app = Flask(__name__)
 cors = CORS(app)
 app.config['SECRET_KEY'] = 'mysecret'
 socketio = SocketIO(app, cors_allowed_origins="*")
-
+config = {
+     'apiKey': os.getenv('API_KEY'),
+     'authDomain': os.getenv('AUTH_DOMAIN'),
+     'databaseURL': os.getenv('DATBASE_URL'),
+     'projectId': os.getenv('PROJECT_ID'),
+     'storageBucket': os.getenv('STORAGE_BUCKET'),
+     'messagingSenderId': os.getenv('MESSENGER_ID'),
+     'appId': os.getenv('APPID'),
+     'measurementId': os.getenv('MEASUREMENT_ID')
+ }
 
 firebase = pyrebase.initialize_app(config)
 
@@ -31,7 +42,7 @@ def send_notification(receiver, noti):
 	#receiver_address = 'receiver'
 	#Setup the MIME
 	message = MIMEMultipart()
-	message['From'] = env.sender_address
+	message['From'] = os.getenv('SENDER_ADDRESS')
 	message['To'] = receiver
 	message['Subject'] = 'EzHire Update'   #The subject line
 	#The body and the attachments for the mail
@@ -39,6 +50,8 @@ def send_notification(receiver, noti):
 	#Create SMTP session for sending the mail
 	session = smtplib.SMTP('smtp.gmail.com', 587) #use gmail with port
 	session.starttls() #enable security
+	sender_address = os.getenv('SENDER_ADDRESS')
+	sender_pass = os.getenv('SENDER_PASS')
 	session.login(sender_address, sender_pass) #login with mail_id and password
 	text = message.as_string()
 	session.sendmail(sender_address, receiver, text)
