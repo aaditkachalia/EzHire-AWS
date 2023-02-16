@@ -46,5 +46,5 @@ torch==1.5.0
 tqdm==4.46.0
 transformers==2.9.1
 urllib3==1.26.5
-Werkzeug==1.0.1
+Werkzeug==2.2.3
 python-dotenv==0.17.1
